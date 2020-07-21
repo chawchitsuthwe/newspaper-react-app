@@ -1,0 +1,32 @@
+.logo{
+	font-size: 40px;
+	font-weight: bold;
+	color: #1A1C1A;
+}
+
+.logo:hover{
+	text-decoration: none;
+	color: #F3DFC1;
+}
+
+.todayDate{
+	font-size: 16px;
+	margin-top: -15px;
+}
+
+.nav-top{
+	background-color: white;
+	font-weight: lighter;
+	text-align: center;
+    display: block;
+}
+
+.btn-search{
+	border-color: #1A1C1A;
+	color: #1A1C1A;
+}
+
+.btn-search:hover{
+	border-color: #F3DFC1;
+	color: #F3DFC1;
+}
