@@ -1,13 +1,11 @@
 import React from 'react';
 
-import NavTop from './NavTop';
-import NavBottom from './NavBottom';
+import Nav from './Nav';
 
 const HomePage = () => {
 	return (
 		<div>
-			<NavTop />
-			<NavBottom />
+			<Nav />
 		</div>
 	)
 }

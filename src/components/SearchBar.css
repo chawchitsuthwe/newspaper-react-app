@@ -1,5 +1,14 @@
 .searchbar{
-	background-color: #F3DFC1;
-	padding-top: 15px;
-	padding-left: 15px;
+	background-color: #1A1C1A;
+	padding: 15px;
+}
+
+.btn-search{
+	border-color: white;
+	color: white;
+}
+
+.btn-search:hover{
+	border-color: #F3DFC1;
+	color: #F3DFC1;
 }

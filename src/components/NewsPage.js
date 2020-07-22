@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+import Nav from './Nav';
 
 const NewsPage = () => {
 	return (
 		<div>
-			News
+			<Nav />
 		</div>
 	)
 }

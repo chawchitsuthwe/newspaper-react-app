@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+
+import Nav from './Nav';
 
 const SportsPage = () => {
 	return (
 		<div>
-			
+			<Nav />
 		</div>
 	)
 }
