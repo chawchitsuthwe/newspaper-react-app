@@ -1,0 +1,15 @@
+.card-body{
+	margin-top: -20px;
+	border: 0px;
+	margin-left: -20px;
+}
+
+.crop {
+    width: 100%; /* width of container */
+    height: 100px; /* height of container */
+    object-fit: cover;
+}
+
+.card{
+	margin-bottom: -20px;
+}
