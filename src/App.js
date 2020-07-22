@@ -2,8 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 
-import {getApiUrl} from './utils'
-
 import HomePage from './components/HomePage';
 import NewsPage from './components/NewsPage';
 import BusinessPage from './components/BusinessPage';
@@ -14,7 +12,6 @@ import SciencePage from './components/SciencePage';
 import TechPage from './components/TechPage';
 
 const App = () => {
-  console.log(getApiUrl("/v2/top-headlines?country=us"));
   return (
     <div className="App">
       <Router>
