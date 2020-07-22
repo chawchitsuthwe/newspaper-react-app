@@ -91,26 +91,20 @@ const HomePage = () => {
 			<section>
 				<div className="container-fluid">
 					<div className="row mt-3">
-						<div className="col-6">
+						<div className="col-lg-6 col-md-12 col-sm-12 mb-2">
 							<a href="#">
-								<div className="card">
-									<div className="card-header">
-										<span className="category-tag">GENERAL</span>
-								    	<h3 className="card-title font-weight-bold">{headNews.title}</h3>
-								    	<p className="font-italic card-date-author">{headNews.author} - {formatDate(headNews.publishedAt)}</p>
-								  	</div>
-									<div className="card-body">
-									 	<img src={headNews.urlToImage} className="card-img pl-4" alt="news" />
-									</div>
+								<div className="article-card">
+									<span className="category-tag">GENERAL</span>
+							    	<h3 className="card-title font-weight-bold">{headNews.title}</h3>
+							    	<p className="font-italic card-date-author">{headNews.author} - {formatDate(headNews.publishedAt)}</p>
+								 	<img src={headNews.urlToImage} className="card-img" alt="news" />
 								</div>
 							</a>
 						</div>
-						<div className="col-3">
-							<div className="row">
-								<ArticleCard article={headHealth} category="HEALTH" formatDate={formatDate} />
-								<ArticleCard article={headTech} category="TECH" formatDate={formatDate} />
-								<ArticleCard article={headSports} category="SPORTS" formatDate={formatDate} />
-							</div>
+						<div className="col-lg-3 col-md-12 col-sm-12">
+							<ArticleCard article={headHealth} category="HEALTH" formatDate={formatDate} />
+							<ArticleCard article={headTech} category="TECH" formatDate={formatDate} />
+							<ArticleCard article={headSports} category="SPORTS" formatDate={formatDate} />
 						</div>
 					</div>
 				</div>
