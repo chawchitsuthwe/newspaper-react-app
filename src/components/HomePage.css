@@ -1,0 +1,44 @@
+.card{
+	border: 0px;
+}
+
+.card-header{
+	background-color: transparent;
+	border: 0px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+
+.card-body{
+	margin-top: -30px;
+	border: 0px;
+}
+
+.card-title{
+	margin-bottom: 2px;
+}
+
+.card-date-author{
+	font-size: 14px;
+}
+
+a{
+	text-decoration: none;
+	color: #1A1C1A;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #F3DFC1;
+}
+
+p{
+	color: #1A1C1A;
+}
+
+.category-tag{
+	padding: 3px;
+	color: #1A1C1A;
+	background-color: #F3DFC1;
+	font-size: 12px;
+}
