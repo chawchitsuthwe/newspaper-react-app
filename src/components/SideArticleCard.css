@@ -1,0 +1,5 @@
+.crop-side {
+    width: 100%; /* width of container */
+    height: auto; /* height of container */
+    object-fit: cover;
+}
