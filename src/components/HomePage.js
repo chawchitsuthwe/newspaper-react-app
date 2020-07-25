@@ -27,70 +27,6 @@ const HomePage = () => {
 	const [latestTech, setLatestTech] = useState([]);
 	const [latestScience, setLatestScience] = useState([]);
 
-	const fetchNewsHeadLine = async () =>{
-		setLoading(true);
-		const link = getApiUrl("/v2/top-headlines?country=us&category=general");
-
-		try {
-	      	const res = await Axios.get(link);
-	      	setLoading(false);
-	      	setHeadNews(res.data.articles[0]);
-	    } 
-	    catch (error) {
-	      	console.log(error);
-	      	setLoading(false);
-	      	setHeadNews({});
-	    }
-	}
-
-	const fetchHealthHeadLine = async () =>{
-		setLoading(true);
-		const link = getApiUrl("/v2/top-headlines?country=us&category=health");
-
-		try {
-	      	const res = await Axios.get(link);
-	      	setLoading(false);
-	      	setHeadHealth(res.data.articles[0]);
-	    } 
-	    catch (error) {
-	      	console.log(error);
-	      	setLoading(false);
-	      	setHeadHealth({});
-	    }
-	}
-
-	const fetchTechHeadLine = async () =>{
-		setLoading(true);
-		const link = getApiUrl("/v2/top-headlines?country=us&category=technology");
-
-		try {
-	      	const res = await Axios.get(link);
-	      	setLoading(false);
-	      	setHeadTech(res.data.articles[0]);
-	    } 
-	    catch (error) {
-	      	console.log(error);
-	      	setLoading(false);
-	      	setHeadTech({});
-	    }
-	}
-
-	const fetchSportsHeadLine = async () =>{
-		setLoading(true);
-		const link = getApiUrl("/v2/top-headlines?country=us&category=sports");
-
-		try {
-	      	const res = await Axios.get(link);
-	      	setLoading(false);
-	      	setHeadSports(res.data.articles[0]);
-	    } 
-	    catch (error) {
-	      	console.log(error);
-	      	setLoading(false);
-	      	setHeadSports({});
-	    }
-	}
-
 	const fetchBusinessLatest = async () =>{
 		setLoading(true);
 		const link = getApiUrl("/v2/top-headlines?country=us&category=business");
@@ -124,6 +60,7 @@ const HomePage = () => {
 	      	if(arr && arr.length > 0){
 	      		setLoading(false);
 	      		setLatestNews(arr.slice(0, 3));
+	      		setHeadNews(arr[0]);
 	      	}
 	      	else{
 	      		setLoading(false);
@@ -147,6 +84,7 @@ const HomePage = () => {
 	      	if(arr && arr.length > 0){
 	      		setLoading(false);
 	      		setLatestSports(arr.slice(0, 5));
+	      		setHeadSports(arr[0]);
 	      	}
 	      	else{
 	      		setLoading(false);
@@ -193,6 +131,7 @@ const HomePage = () => {
 	      	if(arr && arr.length > 0){
 	      		setLoading(false);
 	      		setLatestHealth(arr.slice(0, 5));
+	      		setHeadHealth(arr[0]);
 	      	}
 	      	else{
 	      		setLoading(false);
@@ -216,6 +155,7 @@ const HomePage = () => {
 	      	if(arr && arr.length > 0){
 	      		setLoading(false);
 	      		setLatestTech(arr.slice(0, 5));
+	      		setHeadTech(arr[0]);
 	      	}
 	      	else{
 	      		setLoading(false);
@@ -253,10 +193,6 @@ const HomePage = () => {
 	}
 
 	useEffect(() => {
-    	fetchNewsHeadLine();
-    	fetchSportsHeadLine();
-    	fetchTechHeadLine();
-    	fetchHealthHeadLine();
     	fetchBusinessLatest();
     	fetchNewsLatest();
     	fetchSportsLatest();
@@ -403,8 +339,8 @@ const HomePage = () => {
 						<div className="">
 							<button className="btn btn-social mx-1"><i class="fab fa-facebook-f"></i></button>
 							<button className="btn btn-social mx-1"><i class="fab fa-instagram"></i></button>
-							<button className="btn btn-social mx-1"><i class="fab fa-twitter"></i></button>
 							<button className="btn btn-social mx-1"><i class="fab fa-youtube"></i></button>
+							<button className="btn btn-social mx-1"><i class="fab fa-twitter"></i></button>
 						</div>
 						<div className="separator">&nbsp;&nbsp;NEWSPAPER&nbsp;&nbsp;</div>
 						<p>Copyright &copy; 2020, NEWSPAPER. All Rights Reserved.</p>
