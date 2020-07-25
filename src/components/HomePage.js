@@ -337,10 +337,10 @@ const HomePage = () => {
 				<section>
 					<div className="container-fluid">
 						<div className="">
-							<button className="btn btn-social mx-1"><i class="fab fa-facebook-f"></i></button>
-							<button className="btn btn-social mx-1"><i class="fab fa-instagram"></i></button>
-							<button className="btn btn-social mx-1"><i class="fab fa-youtube"></i></button>
-							<button className="btn btn-social mx-1"><i class="fab fa-twitter"></i></button>
+							<button className="btn btn-social mx-1"><i className="fab fa-facebook-f"></i></button>
+							<button className="btn btn-social mx-1"><i className="fab fa-instagram"></i></button>
+							<button className="btn btn-social mx-1"><i className="fab fa-youtube"></i></button>
+							<button className="btn btn-social mx-1"><i className="fab fa-twitter"></i></button>
 						</div>
 						<div className="separator">&nbsp;&nbsp;NEWSPAPER&nbsp;&nbsp;</div>
 						<p>Copyright &copy; 2020, NEWSPAPER. All Rights Reserved.</p>
