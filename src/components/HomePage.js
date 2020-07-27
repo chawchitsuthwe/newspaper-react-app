@@ -70,7 +70,7 @@ const HomePage = () => {
 	    catch (error) {
 	      	console.log(error);
 	      	setLoading(false);
-	      	setLatestBusiness([]);
+	      	setLatestNews([]);
 	    }
 	}	
 
@@ -221,18 +221,18 @@ const HomePage = () => {
 					<div className="container-fluid">
 						<div className="row mt-3">
 							<div className="col-lg-6 col-md-12 col-sm-12 mb-2">
-								<a href="#">
+								<a href={headNews.url}>
 									<div className="article-card">
 										<span className="category-tag">NEWS</span>
 								    	<h3 className="card-title font-weight-bold">{headNews.title}</h3>
 								    	<p className="font-italic card-date-author">{headNews.author} - {formatDate(headNews.publishedAt)}</p>
-									 	<img src={headNews.urlToImage} className="card-img" alt="news" />
+									 	<img src={headNews.urlToImage || '/newspaper.jpg'} className="card-img" alt="news" />
 									</div>
 								</a>
 							</div>
 							<div className="col-lg-3 col-md-12 col-sm-12">
 								<ArticleCard article={headHealth} category="HEALTH" formatDate={formatDate} includeDesc={false} />
-								<ArticleCard article={headTech} category="TECH" formatDate={formatDate} includeDesc={false} />
+								<ArticleCard article={headTech} category="TECHNOLOGY" formatDate={formatDate} includeDesc={false} />
 								<ArticleCard article={headSports} category="SPORTS" formatDate={formatDate} includeDesc={false} />
 							</div>
 							<div className="col-lg-3 col-md-12 col-sm-12 border align-self-start">
@@ -312,7 +312,7 @@ const HomePage = () => {
 							<div className="col-lg-8 col-md-6 col-sm-12">
 								<h1 className="font-weight-bold font-pink my-3">LATEST TECHNOLOGY</h1>
 								{ latestTech && latestTech.map( (lTech, index) =>
-									<ArticleCard key={index} article={lTech} category="TECH" formatDate={formatDate} includeDesc={true} />
+									<ArticleCard key={index} article={lTech} category="TECHNOLOGY" formatDate={formatDate} includeDesc={true} />
 									)
 								}
 							</div>

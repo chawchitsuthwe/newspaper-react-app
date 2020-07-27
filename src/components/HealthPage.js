@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Nav from './Nav';
+import ArticlesDisplayByCategory from './ArticlesDisplayByCategory';
 
 const HealthPage = () => {
 	return (
 		<div>
-			<Nav />
+			<ArticlesDisplayByCategory category="health" title="HEALTH" />
 		</div>
 	)
 }

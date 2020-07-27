@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Nav from './Nav';
+import ArticlesDisplayByCategory from './ArticlesDisplayByCategory';
 
 const BusinessPage = () => {
 	return (
 		<div>
-			<Nav />
+			<ArticlesDisplayByCategory category="business" title="BUSINESS" />
 		</div>
 	)
 }

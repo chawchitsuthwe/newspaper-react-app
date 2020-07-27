@@ -1,107 +1,12 @@
-import React,{useState, useEffect} from 'react';
-import ReactLoading from 'react-loading';
-import Pagination from './Pagination';
+import React from 'react';
 
-import Axios from "axios";
-import {getApiUrl} from '../utils';
-
-import Nav from './Nav';
-import ArticleCard from './ArticleCard';
+import ArticlesDisplayByCategory from './ArticlesDisplayByCategory';
 
 const NewsPage = () => {
 
-	const [loading, setLoading] = useState(false);
-
-	const [news, setNews] = useState([]);
-	const [currentPage, setCurrentPage] = useState(1);
-	const [articlesPerPage] = useState(10);
-	const [totalResults, setTotalResults] = useState(0);
-
-	useEffect(() => {
-		const fetchNews = async () => {
-			setLoading(true);
-
-			const link = getApiUrl(`/v2/top-headlines?country=us&category=general&pageSize=${articlesPerPage}&page=${currentPage}`);
-
-			try {
-		      	const res = await Axios.get(link);
-		      	setLoading(false);
-		      	setNews(res.data.articles);
-		      	setTotalResults(res.data.totalResults);
-		    } 
-		    catch (error) {
-		      	console.log(error);
-		      	setLoading(false);
-		      	setNews([]);
-		    }
-		}
-	
-		fetchNews();
-	}, [articlesPerPage,currentPage])
-
-	const formatDate = (string) => {
-    	var options = { year: 'numeric', month: 'long', day: 'numeric' };
-    	return new Date(string).toLocaleDateString([],options);
-	}
-
-
-	// Change page
-  	const paginate = (pageNumber) => {
-  		setCurrentPage(pageNumber);
-  	} 
-
 	return (
 		<div>
-			<Nav />
-
-			{
-				loading ? <ReactLoading type="cubes" color="#F3DFC1" height={100} width={100} className="loader" /> :
-
-			<div>
-
-				<h1 className="font-weight-bold text-center mt-5 mb-3">NEWS</h1>
-
-
-				{/*content*/}
-				<section>
-					<div className="container">
-						<div className="row">
-							<div className="col-lg-9 col-md-12 col-sm-12">
-								{ news && news.map( (article, index) =>
-									<ArticleCard key={index} article={article} category="NEWS" formatDate={formatDate} includeDesc={true} />
-									)
-								}
-							</div>
-							<div className="col-lg-3 col-md-12 col-sm-12"></div>
-						</div>
-						<div className="row">
-						    <Pagination
-						        articlesPerPage={articlesPerPage}
-						        totalResults={totalResults}
-						        paginate={paginate}
-						      />
-						</div>
-					</div>
-				</section>
-
-				{/*Footer*/}
-				<section>
-					<div className="container-fluid">
-						<div>
-							<button className="btn btn-social mx-1"><i className="fab fa-facebook-f"></i></button>
-							<button className="btn btn-social mx-1"><i className="fab fa-instagram"></i></button>
-							<button className="btn btn-social mx-1"><i className="fab fa-twitter"></i></button>
-							<button className="btn btn-social mx-1"><i className="fab fa-youtube"></i></button>
-						</div>
-						<div className="separator">&nbsp;&nbsp;NEWSPAPER&nbsp;&nbsp;</div>
-						<p>Copyright &copy; 2020, NEWSPAPER. All Rights Reserved.</p>
-					</div>
-				</section>
-
-			</div>
-
-			}
-
+			<ArticlesDisplayByCategory category="general" title="NEWS" />
 		</div>
 	)
 }

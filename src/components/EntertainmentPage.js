@@ -1,11 +1,11 @@
 import React from 'react';
 
-import Nav from './Nav';
+import ArticlesDisplayByCategory from './ArticlesDisplayByCategory';
 
 const EntertainmentPage = () => {
 	return (
 		<div>
-			<Nav />
+			<ArticlesDisplayByCategory category="entertainment" title="ENTERTAINMENT" />
 		</div>
 	)
 }

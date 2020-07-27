@@ -1,0 +1,23 @@
+.page-link {
+	color: #1A1C1A;
+	border: 1px solid #1A1C1A;
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: 1px;
+	margin-right: 1px;
+	border-radius: 4px;
+}
+ 
+.page-item.active .page-link {
+	z-index: 1;
+	color: #1A1C1A;
+	background-color: #F3DFC1;
+	border-color: #1A1C1A;
+}
+ 
+.page-link:focus, .page-link:hover {
+	color: #1A1C1A;
+	text-decoration: none;
+	background-color: #F3DFC1;
+	border-color: #1A1C1A;
+}
