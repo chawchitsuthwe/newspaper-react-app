@@ -3,13 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './App.css';
 
 import HomePage from './components/HomePage';
-import NewsPage from './components/NewsPage';
-import BusinessPage from './components/BusinessPage';
-import EntertainmentPage from './components/EntertainmentPage';
-import HealthPage from './components/HealthPage';
-import SportsPage from './components/SportsPage';
-import SciencePage from './components/SciencePage';
-import TechPage from './components/TechPage';
+import ArticlesDisplayByCategory from './components/ArticlesDisplayByCategory';
 
 const App = () => {
   return (
@@ -18,13 +12,13 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={HomePage}/>
           <Route exact path="/home" component={HomePage}/>
-          <Route exact path="/news" component={NewsPage}/>
-          <Route exact path="/business" component={BusinessPage}/>
-          <Route exact path="/entertainment" component={EntertainmentPage}/>
-          <Route exact path="/health" component={HealthPage}/>
-          <Route exact path="/sports" component={SportsPage}/>
-          <Route exact path="/science" component={SciencePage}/>
-          <Route exact path="/tech" component={TechPage}/>
+          <Route exact path="/news" render={(props) => <ArticlesDisplayByCategory {...props} category="general" title="NEWS" />} />
+          <Route exact path="/business" render={(props) => <ArticlesDisplayByCategory {...props} category="business" title="BUSINESS" />}/>
+          <Route exact path="/entertainment" render={(props) => <ArticlesDisplayByCategory {...props} category="entertainment" title="ENTERTAINMENT" />}/>
+          <Route exact path="/health" render={(props) => <ArticlesDisplayByCategory {...props} category="health" title="HEALTH" />}/>
+          <Route exact path="/sports" render={(props) => <ArticlesDisplayByCategory {...props} category="sports" title="SPORTS" />}/>
+          <Route exact path="/science" render={(props) => <ArticlesDisplayByCategory {...props} category="science" title="SCIENCE" />}/>
+          <Route exact path="/tech" render={(props) => <ArticlesDisplayByCategory {...props} category="technology" title="TECHNOLOGY" />}/>
           {/*<Route exact path="/articles/:title" component={ArticleDetails}/>*/}
         </Switch>
       </Router>
