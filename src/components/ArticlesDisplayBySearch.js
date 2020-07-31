@@ -6,6 +6,7 @@ import Axios from "axios";
 import {getApiUrl} from '../utils';
 
 import Nav from './Nav';
+import Footer from './Footer';
 import ArticleCard from './ArticleCard';
 
 const ArticlesDisplayBySearch = ({match},props) => {
@@ -87,19 +88,7 @@ const ArticlesDisplayBySearch = ({match},props) => {
 				</section>
 
 				{/*Footer*/}
-				<section>
-					<div className="container-fluid">
-						<div>
-							<button className="btn btn-social mx-1"><i className="fab fa-facebook-f"></i></button>
-							<button className="btn btn-social mx-1"><i className="fab fa-instagram"></i></button>
-							<button className="btn btn-social mx-1"><i className="fab fa-twitter"></i></button>
-							<button className="btn btn-social mx-1"><i className="fab fa-youtube"></i></button>
-						</div>
-						<div className="separator">&nbsp;&nbsp;NEWSPAPER&nbsp;&nbsp;</div>
-						<p>Copyright &copy; 2020, NEWSPAPER. All Rights Reserved.</p>
-					</div>
-				</section>
-
+				<Footer />
 			</div>
 
 			}

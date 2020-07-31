@@ -2,6 +2,7 @@ import React from 'react';
 import './Page404.css';
 
 import Nav from './Nav';
+import Footer from './Footer';
 
 const Page404 =() => {
 	return (
@@ -17,6 +18,9 @@ const Page404 =() => {
 	  			<h1>Page Not Found</h1>
 	  			<a href="/home"><button id="abutton">Go Back Home</button></a>
   			</div>
+
+  			{/*Footer*/}
+			<Footer />
 		</div>
 	)
 }
