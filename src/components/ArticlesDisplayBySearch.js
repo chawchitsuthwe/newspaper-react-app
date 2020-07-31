@@ -65,7 +65,7 @@ const ArticlesDisplayBySearch = ({match},props) => {
 				<section>
 					<div className="container">
 						<div className="row">
-							<div className="col-lg-9 col-md-12 col-sm-12">
+							<div className="col-lg-9 col-md-9 col-sm-12">
 								{ articles && articles.map( (article, index) =>
 									<ArticleCard key={index} article={article} category="SEARCH" formatDate={formatDate} includeDesc={true} />
 									)

@@ -13,7 +13,7 @@ const Pagination = ({ articlesPerPage, totalResults, paginate, currentPage }) =>
   }
 
   return(
-      <MPagination shape="rounded" color="secondary" variant="outlined"
+      <MPagination shape="rounded" color="secondary" variant="outlined" className="d-flex justify-content-center"
         page={page}
         count={noOfPages}
         onChange={handleChange}

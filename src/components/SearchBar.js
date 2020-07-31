@@ -22,7 +22,7 @@ const SearchBar = ({open}) => {
 				      		onChange={e => setSearchText(e.target.value)} />
 				    	</div>
 				    	<div className="col-2">
-				      		<button onClick={searchOnClick} className="btn btn-search my-2 my-sm-0 w-100"><i className="fas fa-search"></i></button>
+				      		<button onClick={searchOnClick} className="btn btn-search my-sm-0 w-100"><i className="fas fa-search"></i></button>
 				    	</div>
 				  	</div>
 				</div>
