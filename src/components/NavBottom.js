@@ -31,7 +31,7 @@ const NavBottom = () => {
 		            </div>
 		        </div>
 		    </nav>
-		    <SearchBar open={open}/>
+		    <SearchBar open={open} />
 		</div>
 	)
 }

@@ -35,8 +35,8 @@ const HomePage = () => {
 	      	const res = await Axios.get(link);
 	      	const arr = res.data.articles;
 	      	if(arr && arr.length > 0){
-	      		setLoading(false);
 	      		setLatestBusiness(arr.slice(0, 4));
+	      		setLoading(false);
 	      	}
 	      	else{
 	      		setLoading(false);
@@ -58,9 +58,9 @@ const HomePage = () => {
 	      	const res = await Axios.get(link);
 	      	const arr = res.data.articles;
 	      	if(arr && arr.length > 0){
-	      		setLoading(false);
 	      		setLatestNews(arr.slice(0, 3));
 	      		setHeadNews(arr[0]);
+	      		setLoading(false);
 	      	}
 	      	else{
 	      		setLoading(false);
@@ -82,9 +82,9 @@ const HomePage = () => {
 	      	const res = await Axios.get(link);
 	      	const arr = res.data.articles;
 	      	if(arr && arr.length > 0){
-	      		setLoading(false);
 	      		setLatestSports(arr.slice(0, 5));
 	      		setHeadSports(arr[0]);
+	      		setLoading(false);
 	      	}
 	      	else{
 	      		setLoading(false);
@@ -106,8 +106,8 @@ const HomePage = () => {
 	      	const res = await Axios.get(link);
 	      	const arr = res.data.articles;
 	      	if(arr && arr.length > 0){
-	      		setLoading(false);
 	      		setLatestEntertainement(arr.slice(0, 5));
+	      		setLoading(false);
 	      	}
 	      	else{
 	      		setLoading(false);
@@ -129,9 +129,9 @@ const HomePage = () => {
 	      	const res = await Axios.get(link);
 	      	const arr = res.data.articles;
 	      	if(arr && arr.length > 0){
-	      		setLoading(false);
 	      		setLatestHealth(arr.slice(0, 5));
 	      		setHeadHealth(arr[0]);
+	      		setLoading(false);
 	      	}
 	      	else{
 	      		setLoading(false);
@@ -153,9 +153,9 @@ const HomePage = () => {
 	      	const res = await Axios.get(link);
 	      	const arr = res.data.articles;
 	      	if(arr && arr.length > 0){
-	      		setLoading(false);
 	      		setLatestTech(arr.slice(0, 5));
 	      		setHeadTech(arr[0]);
+	      		setLoading(false);
 	      	}
 	      	else{
 	      		setLoading(false);
@@ -177,8 +177,8 @@ const HomePage = () => {
 	      	const res = await Axios.get(link);
 	      	const arr = res.data.articles;
 	      	if(arr && arr.length > 0){
-	      		setLoading(false);
 	      		setLatestScience(arr.slice(0, 5));
+	      		setLoading(false);
 	      	}
 	      	else{
 	      		setLoading(false);

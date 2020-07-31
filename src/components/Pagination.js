@@ -1,32 +1,24 @@
-import React from 'react';
-import './Pagination.css'
+import React,{useState} from 'react';
+import MPagination from '@material-ui/lab/Pagination';
 
 const Pagination = ({ articlesPerPage, totalResults, paginate, currentPage }) => {
-  const pageNumbers = [];
 
-  for (let i = 1; i <= Math.ceil(totalResults / articlesPerPage); i++) {
-    pageNumbers.push(i);
+  const noOfPages = Math.ceil(totalResults/articlesPerPage);
+
+  const [page, setPage] = useState(currentPage);
+
+  const handleChange = (e, value) => {
+    paginate(value);
+    setPage(value);
   }
 
-  return (
-    <nav>
-      <ul className='pagination justify-content-start'>
-        {pageNumbers.map(number => (
-          currentPage===number ? 
-            <li key={number} className='page-item active'>
-              <button onClick={() => paginate(number)} className='page-link'>
-                {number}
-              </button>
-            </li> :
-            <li key={number} className='page-item'>
-              <button onClick={() => paginate(number)} className='page-link'>
-                {number}
-              </button>
-            </li>
-        ))}
-      </ul>
-    </nav>
-  );
+  return(
+      <MPagination shape="rounded" color="secondary" variant="outlined"
+        page={page}
+        count={noOfPages}
+        onChange={handleChange}
+      />
+    );
 };
 
 export default Pagination;

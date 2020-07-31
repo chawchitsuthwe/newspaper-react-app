@@ -25,9 +25,9 @@ const ArticlesDisplayByCategory = (props) => {
 
 			try {
 		      	const res = await Axios.get(link);
-		      	setLoading(false);
 		      	setArticles(res.data.articles);
 		      	setTotalResults(res.data.totalResults);
+		      	setLoading(false);
 		    } 
 		    catch (error) {
 		      	console.log(error);
