@@ -59,7 +59,7 @@ const ArticlesDisplayBySearch = ({match},props) => {
 
 			<div>
 
-				<h1 className="font-weight-bold text-center mt-5 mb-3">SEARCH RESULTS</h1>
+				<h1 className="font-weight-bold text-center mt-5 mb-3">SEARCH RESULTS OF "{match.params.keyword}"</h1>
 
 				{/*content*/}
 				<section>

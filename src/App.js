@@ -5,6 +5,7 @@ import './App.css';
 import HomePage from './components/HomePage';
 import ArticlesDisplayByCategory from './components/ArticlesDisplayByCategory';
 import ArticlesDisplayBySearch from './components/ArticlesDisplayBySearch';
+import Page404 from './components/Page404';
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
           render={(props) => <ArticlesDisplayByCategory {...props} category="technology" title="TECHNOLOGY" />}/>
           <Route exact path="/search/:keyword" 
           render={(props) => <ArticlesDisplayBySearch {...props} />}/>
+          <Route path='*' exact={true} component={Page404} />
         </Switch>
       </Router>
     </div>

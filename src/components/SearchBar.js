@@ -11,6 +11,12 @@ const SearchBar = ({open}) => {
 		history.push(`/search/${searchText}`);
 	}
 
+	const handleKeyPress = (e) => {
+	  	if(e.key === 'Enter'){
+	  		searchOnClick();
+	  	}
+	}
+
 	return (
 		<div>
 		{ open && 
@@ -19,7 +25,10 @@ const SearchBar = ({open}) => {
 				    	<div className="col-10">
 				      		<input type="text" className="form-control" placeholder="Search by keywords or phrases "
 				      		value={searchText} 
-				      		onChange={e => setSearchText(e.target.value)} />
+				      		onChange={e => setSearchText(e.target.value)}
+				      		onKeyPress={handleKeyPress}
+				      		 />
+				      		}
 				    	</div>
 				    	<div className="col-2">
 				      		<button onClick={searchOnClick} className="btn btn-search my-sm-0 w-100"><i className="fas fa-search"></i></button>
