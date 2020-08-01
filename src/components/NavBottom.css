@@ -4,7 +4,8 @@ nav{
 }
 
 .nav-bottom{
-	background-color: #1A1C1A;
+	background-color: #D1CDCD;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 15px 0 rgba(0, 0, 0, 0.19);
 }
 
 .nav-item{
@@ -15,7 +16,7 @@ nav{
 }
 
 .nav-item:hover{
-	color: #F3DFC1;
+	color: #3C545C;
 }
 
 .navbar-toggler{
@@ -36,7 +37,5 @@ button{
 }
 
 .active {
-  color: #1A1C1A;
-  background-color: white;
-  border-radius: 2px;
+  color: #3C545C;
 }

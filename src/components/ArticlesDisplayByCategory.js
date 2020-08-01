@@ -53,7 +53,7 @@ const ArticlesDisplayByCategory = (props) => {
 			<Nav />
 
 			{
-				loading ? <ReactLoading type="cubes" color="#F3DFC1" height={100} width={100} className="loader" /> :
+				loading ? <ReactLoading type="cubes" color="#3C545C" height={100} width={100} className="loader" /> :
 
 			<div>
 

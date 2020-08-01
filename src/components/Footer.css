@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     text-align: right;
-    color: #F3DFC1;
+    color: #3C545C;
     font-weight: bold;
     font-size: 30px;
 }
@@ -10,7 +10,7 @@
 .separator::before, .separator::after {
     content: '';
     flex: 1;
-    border-bottom: 1px solid #878787;
+    border-bottom: 1px solid #242323;
 }
 
 .btn-social{
@@ -18,6 +18,6 @@
 }
 
 .btn-social:hover{
-	color: #F3DFC1;
-	background-color: #1A1C1A;
+	color: #3C545C;
+	background-color: #242323;
 }

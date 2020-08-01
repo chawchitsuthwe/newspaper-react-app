@@ -8,35 +8,35 @@
 
 a{
 	text-decoration: none;
-	color: #1A1C1A;
+	color: #242323;
 }
 
 a:hover{
 	text-decoration: none;
-	color: #F3DFC1;
+	color: #3C545C;
 }
 
 p{
-	color: #1A1C1A;
+	color: #242323;
 }
 
 .category-tag{
 	padding: 3px;
-	color: #1A1C1A;
-	background-color: #F3DFC1;
+	color: white;
+	background-color: #3C545C;
 	font-size: 12px;
 }
 
 .font-pink{
-	color: #F3DFC1;
+	color: #3C545C;
 }
 
 .font-dark{
-	color: #1A1C1A;
+	color: #242323;
 }
 
 .bg-dark-pink{
-	background-color: #F3CEA1;
+	background-color: #D1CDCD;
 }
 
 .container-fluid{

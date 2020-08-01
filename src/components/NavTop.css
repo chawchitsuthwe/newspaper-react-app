@@ -1,12 +1,12 @@
 .logo{
 	font-size: 50px;
 	font-weight: bold;
-	color: #1A1C1A;
+	color: #242323;
 }
 
 .logo:hover{
 	text-decoration: none;
-	color: #F3DFC1;
+	color: #3C545C;
 }
 
 .todayDate{
