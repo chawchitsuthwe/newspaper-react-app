@@ -9,7 +9,7 @@ import Nav from './Nav';
 import Footer from './Footer';
 import ArticleCard from './ArticleCard';
 
-const ArticlesDisplayBySearch = ({match},props) => {
+const ArticlesDisplayBySearch = ({match}) => {
 	const [loading, setLoading] = useState(false);
 
 	const [articles, setArticles] = useState([]);

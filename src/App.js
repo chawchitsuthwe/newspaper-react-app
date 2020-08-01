@@ -28,8 +28,7 @@ const App = () => {
           render={(props) => <ArticlesDisplayByCategory {...props} category="science" title="SCIENCE" />}/>
           <Route exact path="/tech" 
           render={(props) => <ArticlesDisplayByCategory {...props} category="technology" title="TECHNOLOGY" />}/>
-          <Route exact path="/search/:keyword" 
-          render={(props) => <ArticlesDisplayBySearch {...props} />}/>
+          <Route exact path="/search/:keyword" component={ArticlesDisplayBySearch} />
           <Route path='*' exact={true} component={Page404} />
         </Switch>
       </Router>

@@ -34,3 +34,9 @@ button{
 	border-style: none;
 	background-color: transparent;
 }
+
+.active {
+  color: #1A1C1A;
+  background-color: white;
+  border-radius: 2px;
+}

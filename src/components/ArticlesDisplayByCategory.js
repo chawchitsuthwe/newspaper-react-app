@@ -13,7 +13,6 @@ const ArticlesDisplayByCategory = (props) => {
 	const [loading, setLoading] = useState(false);
 
 	const [articles, setArticles] = useState([]);
-	const [category] = useState(props.category);
 	const [currentPage, setCurrentPage] = useState(1);
 	const [articlesPerPage] = useState(10);
 	const [totalResults, setTotalResults] = useState(0);
@@ -21,8 +20,7 @@ const ArticlesDisplayByCategory = (props) => {
 	useEffect(() => {
 		const fetchArticles = async () => {
 			setLoading(true);
-
-			const link = getApiUrl(`/v2/top-headlines?country=us&category=${category}&pageSize=${articlesPerPage}&page=${currentPage}`);
+			const link = getApiUrl(`/v2/top-headlines?country=us&category=${props.category}&pageSize=${articlesPerPage}&page=${currentPage}`);
 
 			try {
 		      	const res = await Axios.get(link);
@@ -38,7 +36,7 @@ const ArticlesDisplayByCategory = (props) => {
 		}
 	
 		fetchArticles();
-	}, [category,articlesPerPage,currentPage])
+	}, [props.category,articlesPerPage,currentPage])
 
 	const formatDate = (string) => {
     	var options = { year: 'numeric', month: 'long', day: 'numeric' };
